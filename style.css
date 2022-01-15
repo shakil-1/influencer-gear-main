@@ -11,7 +11,9 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
-
+.hilite-color {
+  color: orange;
+}
 /* start header section */
 .header-top {
   display: grid;
@@ -64,10 +66,14 @@ body {
   font-size: 15px;
   border-radius: 10px;
   outline: 0;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #f900cf;
+  color: black;
 }
 .btn i {
   margin-left: 5px;
-  
 }
 /* button section end  */
 
@@ -84,8 +90,7 @@ body {
   padding: 40px 0;
   cursor: pointer;
 }
-/* end ecommerce logo css  */ 
-
+/* end ecommerce logo css  */
 
 /* start card top section  */
 .top-center-title {
@@ -136,7 +141,6 @@ body {
 }
 /* end card top section  */
 
-
 /* start see more content  */
 .see-more-section {
   height: 85px;
@@ -149,7 +153,6 @@ body {
   color: #e91e63;
 }
 /* end see more content  */
-
 
 /* start about section css  */
 /* section left  */
@@ -204,11 +207,11 @@ body {
 }
 .card-footer {
   width: 250px;
-  border: 1px solid #8f8b8d;
-  background-color: lightgrey;
+  border: 1px solid #ebe7e9;
+  background-color: #673ab7;
   padding: 4px;
   margin-left: 50px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 7px 7px #f7f0f0;
   border-radius: 43px 0px 43px 0px;
   position: relative;
@@ -223,16 +226,16 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #6f42c1;
+  background-color: #3d01ad;
   transition: all 0.7s;
-  color: white;
+  color: #ffff;
   z-index: -1;
   box-shadow: 0px 0px 7px 7px #f7f0f0;
   border-radius: 43px 0px 43px 0px;
 }
 
 .card-footer:hover::before {
-  background-color: rgba(73, 64, 189, 0.5);
+  background-color: rgba(25, 12, 204, 0.5);
   height: 100%;
   color: white;
 }
@@ -242,7 +245,7 @@ body {
 .card-fo-icon {
   font-size: 60px;
   display: grid;
-  color: #c01bcb;
+  color: #f900cf;
   align-content: center;
   justify-content: center;
   justify-items: center;
@@ -300,13 +303,25 @@ footer p {
   cursor: pointer;
 }
 /* end footer section  */
+
 /* **************************************************** */
+
 /* responsibe start  */
-
+/* desktop device responsive start  */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
-}
+  .logo-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .card-section {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* desktop device responsive end  */
+
+/* tablet device responsive start  */
 @media (min-width: 768px) and (max-width: 1024px) {
   .logo-img {
     grid-template-columns: 1fr 1fr;
@@ -314,20 +329,20 @@ footer p {
     align-content: space-around;
     justify-items: stretch;
   }
-
   .card-section {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(2, 1fr);
   }
-
   .about-section {
     display: flex;
     flex-direction: column;
   }
-
 }
+/* tablet device responsive end  */
 
+
+/* mobile device responsive start  */
 @media (min-width: 300px) and (max-width: 767px) {
   .banner-section {
     grid-template-columns: repeat(1, 1fr);
@@ -335,14 +350,16 @@ footer p {
   .banner-section-left h1 {
     font-size: 50px;
   }
-
   .logo-img {
     display: flex;
     flex-direction: column;
   }
-
   .card-section {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin-bottom: 20px;
+    justify-items: center;
   }
   .card {
     width: 295px;
@@ -350,7 +367,6 @@ footer p {
   .card-img img {
     width: 295px;
   }
-
   .about-section {
     display: flex;
     flex-direction: column;
@@ -366,7 +382,6 @@ footer p {
   .about-section-left {
     width: 294px;
   }
-
   .card-footer-section {
     display: flex;
     justify-content: center;
@@ -376,6 +391,5 @@ footer p {
     margin: 0;
   }
 }
-
-
+/* mobile device responsive end  */
 /* responsiv end  */
