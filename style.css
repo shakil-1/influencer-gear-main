@@ -264,6 +264,7 @@ body {
 .card-footer p {
   padding: 10px;
   transition: all 0.7s;
+  font-family:Roboto;
 }
 /* end about section css  */
 
